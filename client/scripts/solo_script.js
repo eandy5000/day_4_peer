@@ -10,16 +10,12 @@
 
 
 var arrayAtticus = ["Atticus", "2405", "47000", 3];
-//console.log(arrayAtticus.length);
 var arrayJem = ["Jem", "62347", "63500", 4];
 var arrayBoo = ["Boo", "11435", "54000", 3];
 var arrayScout = ["Scout", "6243", "74750", 5];
 
 var array = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
-console.log("array.length "+array.length);
-console.log("this is what is in the array "+array);
-console.log("this is what is in the array[0] "+array[0]);
-console.log("this is what is in the array[0][0] "+array[0][0]);
+
 
 //Create variables used to write to the DOM
 var newEl, newText, position;
@@ -28,24 +24,19 @@ position = document.getElementById('content');
 
 //Loop the array, extracting each array and writing information to the DOM
 //Note that the information is not 'clean'
-for(var i = 0; i < array.length; i++){
+for (var i = 0; i < array.length; i++){
 	array[i] = calculateSTI(array[i]);
-  //array[i] = calculateSTI(array);
-  //console.log("in our for loop this is i "+i);
-  //console.log("This is what is in array[i] "+array[i]);
-  //console.log("this is in CalcSTI "+calculateSTI(array));
  	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
+	newText = document.createTextNode("Name: " + array[i][0] + " Employee Number: "+ array[i][1]+ " Base Salary: "+ array[i][2] + " Review Score: "+ array[i][3]);
 	newEl.appendChild(newText);
 	position.appendChild(newEl);
 }
 
 
-console.log("array before calculateSTI "+array);
+
 
 function calculateSTI(array){
   var newArray = [];
-//console.log("this is array in calcSTI function "+array);
   newArray[0] = array[0];
   var employeeNumber = array[1];
   var baseSalary = array[2];
@@ -59,7 +50,6 @@ function calculateSTI(array){
   newArray[1] = bonus;
   newArray[2] = Math.round (baseSalary * (1.0 + bonus));
   newArray[3] = Math.round (baseSalary * bonus);
-  console.log(newArray[0] + " " + newArray[1] + " " + newArray[2] + " " + newArray[3]);
   return newArray;
 }
 
