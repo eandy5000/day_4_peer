@@ -101,8 +101,17 @@ $(document).ready(function(){
        '<td>'+array[i][1]+'</td>'+
        '<td>$'+array[i][2]+'</td>'+
        '<td>'+array[i][3]+'</td>'+
+       '<td><button class = "btn btn-info" id="'+i+'">Remove</button></td>'+
        '</tr>');
    }
+   
+   $('table').on('click',"button", function(){
+       
+       var el = $(this).parent().parent();
+      
+      console.log(el); 
+      $(el).remove();
+   });
    
     
 });

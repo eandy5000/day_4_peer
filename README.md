@@ -1,33 +1,13 @@
 #Exercise
 
-Redoing an old exercise with bootstrap gulp and jquery
+##Redoing an old exercise with bootstrap gulp and jquery
 
-### Three Bugs
-Gosh darn it, our code for our STI solver has three bugs!
+What I want you to do for this challenge, is take the Three Bugs Challenge that you completed individually, then mesh it together with your seating partners code. Then, together, you are going to replace the DOM appending code that currently exists, with jQuery code that is much nicer and cleaner! Make sure to put each individual employee inside of their own Div Container. 
 
-Code has been added for you to write the information to the DOM. Read each line and think conceptually about what
-the code is 'telling' you.
+Then, append a button to each employee. Clicking on the button should simple console log out EVERY employee. Then, style up the whole experience with div that sit next to each other horizontally (not vertically as they default to!). 
 
-Make sure to reference the original challenge for the specific notes on what the application is supposed to do.
+##Hard Mode
+You and your partner should do a little research into 'this', or more specifically '$(this)'. You should replace the console.log code that currently logs out all of the employees, to specifically console log out just the employee that was clicked!
 
-Once you have a handle on that, notice that the result of the code is... well... not right.
-It seems that our information is not being displayed correctly.
-
-Walk through the code and see if you can spot what is going wrong. 
-Additionally, try using console.logs strategically to see if you can isolate the issues.
-Once you have found an issue, go ahead and make the correction.
-
-At the top of the document, add comments about the errors that you have found.
-Make sure to severe the connection to this remote repo and check your work into your own remote repo!
-
-Good luck!
-
-### Hard Mode
-Correct the output to the DOM so that it includes spaces between each set of information, rather than be bundled 
-close as it is now.
-
-Example, "information,information,information" > "information, information, information"
-
-### Pro Mode
-Style the result to be 'prettier'! Part of making it prettier means that you will want to remove the bullets from 
-the list items. However, in this mode, you are not allowed to change it from 'li' items as it is now.
+##Pro Mode
+Replace the console.log functionality with .remove(), but specifically remove the whole container, relative to the employee that was clicked.
