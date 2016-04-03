@@ -1,4 +1,8 @@
-# Three Bugs
+#Exercise
+
+Redoing an old exercise with bootstrap gulp and jquery
+
+### Three Bugs
 Gosh darn it, our code for our STI solver has three bugs!
 
 Code has been added for you to write the information to the DOM. Read each line and think conceptually about what
@@ -18,12 +22,12 @@ Make sure to severe the connection to this remote repo and check your work into 
 
 Good luck!
 
-## Hard Mode
+### Hard Mode
 Correct the output to the DOM so that it includes spaces between each set of information, rather than be bundled 
 close as it is now.
 
 Example, "information,information,information" > "information, information, information"
 
-## Pro Mode
+### Pro Mode
 Style the result to be 'prettier'! Part of making it prettier means that you will want to remove the bullets from 
 the list items. However, in this mode, you are not allowed to change it from 'li' items as it is now.

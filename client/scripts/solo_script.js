@@ -17,24 +17,6 @@ var arrayScout = ["Scout", "6243", "74750", 5];
 var array = [arrayAtticus, arrayJem, arrayBoo, arrayScout];
 
 
-//Create variables used to write to the DOM
-var newEl, newText, position;
-//Capture the position of insertion into the DOM
-position = document.getElementById('content');
-
-//Loop the array, extracting each array and writing information to the DOM
-//Note that the information is not 'clean'
-for (var i = 0; i < array.length; i++){
-	array[i] = calculateSTI(array[i]);
- 	newEl = document.createElement('li');
-	newText = document.createTextNode("Name: " + array[i][0] + " Employee Number: "+ array[i][1]+ " Base Salary: "+ array[i][2] + " Review Score: "+ array[i][3]);
-	newEl.appendChild(newText);
-	position.appendChild(newEl);
-}
-
-
-
-
 function calculateSTI(array){
   var newArray = [];
   newArray[0] = array[0];
@@ -94,3 +76,33 @@ function getIncomeAdjustment(salary){
   }
   return incomeAdjustment;
 }
+
+//REPLACING WITH JQUERY 
+//Create variables used to write to the DOM
+//var newEl, newText, position;
+//Capture the position of insertion into the DOM
+//position = document.getElementById('content');
+
+//Loop the array, extracting each array and writing information to the DOM
+//Note that the information is not 'clean'
+// for (var i = 0; i < array.length; i++){
+// 	array[i] = calculateSTI(array[i]);
+//  	newEl = document.createElement('li');
+// 	newText = document.createTextNode("Name: " + array[i][0] + " Employee Number: "+ array[i][1]+ " Base Salary: "+ array[i][2] + " Review Score: "+ array[i][3]);
+// 	newEl.appendChild(newText);
+// 	position.appendChild(newEl);
+// }
+
+$(document).ready(function(){
+   
+   for (var i = 0; i < array.length; i++) {
+       $('table').append('<tr>'+
+       '<td>'+array[i][0]+'</td>'+
+       '<td>'+array[i][1]+'</td>'+
+       '<td>$'+array[i][2]+'</td>'+
+       '<td>'+array[i][3]+'</td>'+
+       '</tr>');
+   }
+   
+    
+});
